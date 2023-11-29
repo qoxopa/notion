@@ -1,257 +1,178 @@
+
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greetings</title>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <style>
 
-  <style>
-    :root {
-      --my-color:#34495e;
-      --my-color-accent:#2c3e50;
-      --black: #3c3c3c;
-      --black-accent: #2d2d2d;
-      --blue: #809bce;
-      --blue-accent: #5c6f94;
-      --purple: #8a508f;
-      --purple-accent: #5d3661;
-      --mint: #b8e0d4;
-      --mint-accent: #8ba89f;
-      --pink: #eac4d5;
-      --pink-accent: #b495a3;
-      --green: #74a892;
-      --green-accent: #5e8675;
-      --red:#d74a49;
-      --red-accent:#b53f3f;
-      --orange:#d35400;
-      --orange-accent:#9e4102;
-      --yellow:#f1c40f;
-      --yellow-accent:#bd9a0c;
-    }
+@font-face {
+    font-family: 'Orbit-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/Orbit-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 
-    button {
-      background: none;
-      color: inherit;
-      border: none;
-      padding: 0;
-      font: inherit;
-      cursor: pointer;
-      outline: inherit;
-    }
+        body{
+            font-family: 'Orbit-Regular';
 
-    i {
-      padding-right: 2px;
-    }
 
-    .btn {
-      text-align: center;
-      color: #ffffff;
-      font-family: 'Manrope';
-      display: inline-block;
-      margin: 10px;
-    }
+        }
 
-    .my-color {
-      background-color: var(--my-color);
-    }
+        .widget {
+            padding: 5px 5px ;
+            color: #000000;
+            display: flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction: column;
+            max-width: 95%;
+            margin: auto;
+            border: 3px solid #000000;
+            border-radius: 5px;
+            box-shadow: 2px 2px 1px 0px #000000;
 
-    .my-color:hover {
-      background-color: var(--my-color-accent);
-    }
+        }
 
-    .my-color.threeD {
-      box-shadow: 0px 4px 0px var(--my-color-accent);
-    }
+           
+        .greet{
+            font-size: 3em;
+        }
 
-    .my-color.threeD:active {
-      box-shadow: 0 0;
-      background-color: var(--my-color-accent);
-    }
-    .black {
-      background-color: var(--black);
-    }
+        .date {
+      
+            font-family: monospace;
+            font-size: 2em;
+        }
 
-    .black:hover {
-      background-color: var(--black-accent);
-    }
+        .clock {
+            font-family: monospace;
+            font-size: 2em;
+        }
 
-    .black.threeD {
-      box-shadow: 0px 4px 0px var(--black-accent);
-    }
+        .time {
+            display: inline-block;
+            min-width: 20px;
+        }
 
-    .black.threeD:active {
-      box-shadow: 0 0;
-      background-color: var(--black-accent);
-    }
+        .colon {
+            font-size: 1em;
+            display: inline-block;
+        }
 
-    .blue {
-      background-color: var(--blue);
-    }
+     
 
-    .blue:hover {
-      background-color: var(--blue-accent);
-    }
 
-    .blue.threeD {
-      box-shadow: 0px 4px 0px var(--blue-accent);
-    }
 
-    .blue.threeD:active {
-      box-shadow: 0 0;
-      background-color: var(--blue-accent);
-    }
 
-    .purple {
-      background-color: var(--purple);
-    }
-
-    .purple:hover {
-      background-color: var(--purple-accent);
-    }
-
-    .purple.threeD {
-      box-shadow: 0px 4px 0px var(--purple-accent);
-    }
-
-    .purple.threeD:active {
-      box-shadow: 0 0;
-      background-color: var(--purple-accent);
-    }
-
-    .mint {
-      background-color: var(--mint);
-    }
-
-    .mint:hover {
-      background-color: var(--mint-accent);
-    }
-
-    .mint.threeD {
-      box-shadow: 0px 4px 0px var(--mint-accent);
-    }
-
-    .mint.threeD:active {
-      box-shadow: 0 0;
-      background-color: var(--mint-accent);
-    }
-
-    .pink {
-      background-color: var(--pink);
-    }
-
-    .pink:hover {
-      background-color: var(--pink-accent);
-    }
-
-    .pink.threeD {
-      box-shadow: 0px 4px 0px var(--pink-accent);
-    }
-
-    .pink.threeD:active {
-      box-shadow: 0 0;
-      background-color: var(--pink-accent);
-    }
-
-    .green {
-      background-color: var(--green);
-    }
-
-    .green:hover {
-      background-color: var(--green-accent);
-    }
-
-    .green.threeD {
-      box-shadow: 0px 4px 0px var(--green-accent);
-    }
-
-    .green.threeD:active {
-      box-shadow: 0 0;
-      background-color: var(--green-accent);
-    }
-
-    .red {
-      background-color: var(--red);
-    }
-
-    .red:hover {
-      background-color: var(--red-accent);
-    }
-
-    .red.threeD {
-      box-shadow: 0px 4px 0px var(--red-accent);
-    }
-
-    .red.threeD:active {
-      box-shadow: 0 0;
-      background-color: var(--red-accent);
-    }
-
-    .orange {
-      background-color: var(--orange);
-    }
-
-    .orange:hover {
-      background-color: var(--orange-accent);
-    }
-
-    .orange.threeD {
-      box-shadow: 0px 4px 0px var(--orange-accent);
-    }
-
-    .orange.threeD:active {
-      box-shadow: 0 0;
-      background-color: var(--orange-accent);
-    }
-
-    .yellow {
-      background-color: var(--yellow);
-    }
-
-    .yellow:hover {
-      background-color: var(--yellow-accent);
-    }
-
-    .yellow.threeD {
-      box-shadow: 0px 4px 0px var(--yellow-accent);
-    }
-
-    .yellow.threeD:active {
-      box-shadow: 0 0;
-      background-color: var(--yellow-accent);
-    }
-
-    .rounded {
-      border-radius: 20px;
-    }
-
-    .small {
-      padding: 5px 20px;
-      font-size: 10px;
-    }
-
-    .mid {
-      padding: 10px 40px;
-      font-size: 12px;
-    }
-
-    .large {
-      padding: 15px 60px;
-      font-size: 18px;
-    }
-  </style>
-
+    </style>
 </head>
-
 <body>
 
-  <button class="btn large my-color rounded threeD" type="button" onclick="navigate()"> <i class="fa-regular fa-star"></i>공동업무</button>
-  
-  <script>
-    function navigate() {
-      window.open("https://example.com", '_blank').focus();
+
+
+
+<div class="container>">
+    <div class="widget">
+
+            <div class="greet" id="greet"></div>
+
+                <div class="date" id="date"></div>
+                <div class="clock">
+                    <div class="time" id="hour"></div>
+                    <div class="colon">:</div>
+                    <div class="time" id="min"></div>
+                    <div class="colon">:</div>
+                    <div class="time" id="sec"></div>
+                </div>
+           
+
+        
+
+    </div>
+</div>
+        
+
+
+
+<script>
+
+function dispalyGreetings(today){
+        hrs = today.getHours();
+        name=""
+        if (hrs < 12)
+            greet = '오늘 하루도 응원할게요 희망♥  '+name;
+        else if (hrs >= 12 && hrs <= 17)
+            greet = 'Good Afternoon '+name;
+        else if (hrs >= 17 && hrs <= 24)
+            greet = '곧 퇴근이네요.  '+name;
+        document.getElementById('greet').innerHTML = greet;
+
     }
-  </script>
+
+    function dispalyDate(today) {  
+       
+        const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        const monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
+
+        var dayName = days[today.getDay()];
+        var monthName = monthNames[today.getMonth()];
+        var date = today.getDate();
+        var year = today.getFullYear();
+        document.getElementById('date').innerHTML =dayName+", "+monthName+" "+date+" "+year;
+
+    }
+
+
+    function dispalyClock(today) {
+
+        var hour = padZeros(twelveHour(today.getHours()));
+        var minutes = padZeros(today.getMinutes());
+        var seconds = padZeros(today.getSeconds());
+       
+        if(today.getHours() >=12){
+            seconds+=" pm"
+        }
+        else{
+            seconds+=" am"
+        }
+       
+        document.getElementById('hour').innerHTML = hour;
+        document.getElementById('min').innerHTML = minutes;
+        document.getElementById('sec').innerHTML = seconds;
+    }
+
+    function twelveHour(hour) {
+        if (hour > 12) {
+            return hour -= 12
+        } else if (hour === 0) {
+            return hour = 12;
+        } else {
+            return hour
+        }
+    }
+    function padZeros(num) {
+        if (num < 10) {
+            num = '0' + num
+        };
+        return num;
+    }
+
+    function dispalyWidget() {
+        var today = new Date();
+        dispalyGreetings(today);
+        dispalyDate(today);
+        dispalyClock(today);
+        setTimeout(dispalyWidget, 500);
+    }
+
+    dispalyWidget()
+
+</script>
 
 </body>
-
 </html>
