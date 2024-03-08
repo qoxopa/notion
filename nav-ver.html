@@ -58,13 +58,13 @@
 <body>
 
 	<nav class="navMenu  border">
-		<a id="home" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-house"></i> 그룹웨어</a>
-		<a id="inbox" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-inbox"></i> 코너스톤</a>
-		<a id="projects" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-briefcase"></i> BACKLOG</a>
-		<a id="business" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-money-bill-wave"></i> CX운영지표</a>
-		<a id="knowledge" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-lightbulb"></i> SPRINT</a>
-		<a id="topics" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-layer-group"></i> REPORT</a>
-		<a id="notes" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book"></i> MEETING NOTE</a>
+		<a id="그룹웨어" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-house"></i> 그룹웨어</a>
+		<a id="코너스톤" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-inbox"></i> 코너스톤</a>
+		<a id="BACKLOG" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-briefcase"></i> BACKLOG</a>
+		<a id="CX운영지표" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-money-bill-wave"></i> CX운영지표</a>
+		<a id="SPRINT" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-lightbulb"></i> SPRINT</a>
+		<a id="REPORT" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-layer-group"></i> REPORT</a>
+		<a id="MEETING NOTE" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book"></i> MEETING NOTE</a>
 
 
 
@@ -81,20 +81,22 @@
 
 		function navigate(id) {
 
-			if (id == 'CX운영지표')
+	if (id == 'CX운영지표')
 				window.open("https://barogo.sharepoint.com/:x:/r/sites/2W_BizOperation/_layouts/15/Doc.aspx?sourcedoc=%7BA2827332-F9D6-4E1C-ABE3-5AE60FB1F145%7D&file=2%EB%A5%9C%EC%82%AC%EC%97%85%EC%A7%80%EC%9B%90%EC%84%B9%ED%84%B0_%EC%A0%84%EC%B2%B4%EC%A7%80%ED%91%9C_Master.xlsx&_DSL=1&action=default&mobileredirect=true", '_blank').focus();
-            else if (id == "SPRINT")
-				window.open("https://www.notion.so/barogohq/c2425e169a2a49ba90130e53de1449f5?v=480a3993583b4776831570236d2bdd08&pvs=4", '_blank').focus();
-            else if (id == "BACKLOG")
-				window.open("https://www.notion.so/barogohq/e87f57ffe693426a803ac84b3056707f?v=6100466fbffe4579a7962c5441d6f523&pvs=4", '_blank').focus();
-            else if (id == "REPORT")
-				window.open("https://www.notion.so/barogohq/6fc433fe2ae849c5b1246833f3232f4f?v=c2eafd72cf07459d907e47c6a981c30f&pvs=4", '_blank').focus();
-            else if (id == "MEETING NOTE")
-				window.open("https://www.notion.so/barogohq/e8c6412acf874334a05e974862354291?v=12f9738f715b407e8755db3aa90b4fc4&pvs=4", '_blank').focus();
-            else if (id == '그룹웨어')
+		else if (id == '그룹웨어')
 				window.open("https://group.8590.co.kr/covicore/login.do", '_blank').focus();
-			else if (id == "코너스톤")
+		else if (id == "코너스톤")
 				window.open("https://barogohq.csod.com/", '_blank').focus();
+            	else if (id == "REPORT")
+				window.open("https://www.notion.so/barogohq/6fc433fe2ae849c5b1246833f3232f4f?v=c2eafd72cf07459d907e47c6a981c30f&pvs=4", '_blank').focus();
+	 	else if (id == "MEETING NOTE")
+				window.open("https://www.notion.so/barogohq/e8c6412acf874334a05e974862354291?v=12f9738f715b407e8755db3aa90b4fc4&pvs=4", '_blank').focus();
+		else if (id == "SPRINT")
+				window.open("https://www.notion.so/barogohq/c2425e169a2a49ba90130e53de1449f5?v=480a3993583b4776831570236d2bdd08&pvs=4", '_blank').focus();
+    		else if (id == "BACKLOG")
+				window.open("https://www.notion.so/barogohq/e87f57ffe693426a803ac84b3056707f?v=6100466fbffe4579a7962c5441d6f523&pvs=4", '_blank').focus();
+
+
 			
 		}
 	</script>
