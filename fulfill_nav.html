@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+	<!-- Google Font -->
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+
+	<!-------->
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+
+		.navMenu {
+			font-family: 'Advent Pro', sans-serif;
+			padding: 8px;
+			text-align: left;
+			margin: 5px auto;
+			width: fit-content;
+		}
+
+		.navMenu a {
+			color: #626262;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			padding: 6px;
+		}
+
+		.background {
+			background-color: #ece5f0;
+		}
+
+		.border {
+			border: 1px solid #cccccc;
+
+		}
+
+		.navMenu a:hover {
+
+			color: #d09c0b;
+		}
+	</style>
+</head>
+
+<body>
+<left>
+	<nav class="navMenu  border">
+    <a id="정보이관서" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-house"></i> 정보이관서</a>
+    <a id="MEETING NOTE" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book"></i> MEETING NOTE</a>
+		<a id="그룹웨어" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-money-bill-wave"></i> 그룹웨어</a>
+		<a id="코너스톤" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-inbox"></i> 코너스톤</a>
+		<a id="레드마인" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-layer-group"></i> 레드마인</a>
+    <a id="컨트롤룸" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-wrench"></i> 컨트롤룸</a>
+    <a id="웹어드민" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-briefcase"></i> 웹어드민</a>
+		<a id="업무 진행 FLOW" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-lightbulb"></i> 업무 진행 FLOW</a>
+		
+
+
+	</nav>
+
+
+	<script>
+
+		let direction = "horizontal";
+		if (direction === "vertical") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:3px} i{width:1px; margin-right:1px} .navMenu{margin:1px}</style>`)
+		}
+
+
+		function navigate(id) {
+
+	if (id == '정보이관서')
+				window.open("https://barogo.sharepoint.com/:x:/s/B2Bsalesgroup/EVFnMldL2D5GpqAV-v_6gcUBO3DQJ9J1KOt5U3n6S1Im2w?e=D34Qg3&CID=b758bb16-b050-f82b-5491-c5a02155e9e9", '_blank').focus();
+		else if (id == 'MEETING NOTE')
+				window.open("추가예정", '_blank').focus();
+		else if (id == "그룹웨어")
+				window.open("https://group.8590.co.kr/covicore/login.do", '_blank').focus();
+    else if (id == "코너스톤")
+				window.open("https://barogohq.csod.com/login/render.aspx?id=defaultclp", '_blank').focus();
+	 	else if (id == "레드마인")
+				window.open("https://redmine.barogo.io/", '_blank').focus();
+		else if (id == "컨트롤룸")
+				window.open("https://admin.gorelas.com/login", '_blank').focus();
+    else if (id == "웹어드민")
+				window.open("https://hqwebadmin.barogo.co.kr/programs/login.asp", '_blank').focus();
+    else if (id == "업무 진행 FLOW")
+				window.open("https://www.notion.so/barogohq/flow-4416c81f4e7d466a9ebe4de9790cc166?pvs=4", '_blank').focus();
+
+			
+		}
+	</script>
+
+</left>
+</body>
+
+</html>
